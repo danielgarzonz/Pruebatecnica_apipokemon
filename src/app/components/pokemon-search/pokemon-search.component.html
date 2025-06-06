@@ -1,0 +1,115 @@
+<div class="container">
+  <div class="row justify-content-center">
+
+    <div class="col-lg-12">
+      <div class="text-center">
+        <!-- Logo d euna pokebola -->
+        <img src="https://www.pngplay.com/wp-content/uploads/2/Pokeball-Background-PNG-Image.png" alt="Pokémon Logo" class="text-center w-25 mb-3">
+      </div>
+
+    </div>
+    <div class="col-lg-12">
+        <div class="text-center">
+        <h1>Pokemón API</h1>
+        </div>
+    </div>
+    <div class="col-xl-6 col-lg-6">
+    <!-- Buscador -->
+            <div class="input-group mb-2 p-2">
+                <input type="text" class="form-control form-control-md border-0 bg-light rounded-5" 
+                    [(ngModel)]="pokemonName" 
+                    placeholder="Escribe el nombre de un Pokémon"
+                    (keyup.enter)="searchPokemon()">
+                <button class="btn btn-dark btn-md rounded-5 ms-3" 
+                        (click)="searchPokemon()"
+                        [disabled]="isLoading || !pokemonName.trim()">
+                <span *ngIf="!isLoading">➔</span>
+                <span *ngIf="isLoading" class="spinner-border spinner-border-sm" role="status"></span>
+                </button>
+            </div>
+        </div>
+        <div class="col-lg-12">
+          <!-- Mensaje de error cuando no hay pokemon en la API -->
+          <div *ngIf="error" class="bg-fairy m-3 p-5 text-center rounded-5">
+            {{ error }}
+          </div>
+
+          <!-- Detalles del Pokémon -->
+          <div *ngIf="pokemonData">
+            <div *ngFor="let type of pokemonData.types" class="row rounded-5 p-2 my-3 mx-2" [class]="'bg-' + type + '-subtle'">
+              <!-- Columna izquierda: Imagen y tipos -->
+              <div class="col-lg-6 text-center mb-4 mb-md-0">
+                <h1 class="text-capitalize mt-5 display-1 fw-bold">{{ pokemonData.name }}</h1>
+                <img [src]="pokemonData.image" 
+                     [alt]="pokemonData.name" 
+                     class="pokemon-image mb-3">
+                
+                <p class="text-muted">Especie: {{ pokemonData.species }}</p>
+                
+                <div class="types mb-3">
+                  <span *ngFor="let type of pokemonData.types" 
+                        class="type-badge p-2 me-1" 
+                        [class]="'bg-' + type">
+                    {{ type }}
+                  </span>
+                </div>
+              </div>
+              
+              <!-- Columna derecha: Stats, habilidades y movimientos -->
+              <div class="col-lg-6" *ngIf="pokemonData">
+                <!-- Habilidades -->
+                <div class="mb-3">
+                  <div class="text-center p-2 rounded-3 fw-bold mb-3" [class]="'bg-' + type + '-subtle'">
+                    Habilidades
+                  </div>
+                  <div class="p-2 border-0">
+                    <div class="d-flex flex-wrap">
+                      <span *ngFor="let ability of pokemonData.abilities" 
+                            class="badge me-2 mb-2" [class]="'bg-' + type + '' + ' txt-' + type">
+                        {{ ability }}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Estadísticas -->
+                <div class="mb-3">
+                  <div class="text-center p-2 rounded-3 fw-bold mb-3" [class]="'bg-' + type + '-subtle'">
+                    Estadísticas
+                  </div>
+                  <div class="p-2">
+                    <div *ngFor="let stat of pokemonData.stats" class="mb-3">
+                      <div class="d-flex justify-content-between mb-1">
+                        <span class="text-capitalize fw-bold">{{ stat.name }}</span>
+                        <span>{{ stat.value }}</span>
+                      </div>
+                      <div class="progress">
+                        <div class="stat-bar progress-bar" 
+                             [ngClass]="{'stat-high': stat.value > 80, 'stat-medium': stat.value > 50 && stat.value <= 80, 'stat-low': stat.value <= 50}"
+                             [style.width]="(stat.value / 150) * 100 + '%'">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Movimientos -->
+                <div class="mb-3">
+                  <div class="text-center p-2 rounded-3 fw-bold mb-3" [class]="'bg-' + type + '-subtle'">
+                    Movimientos
+                  </div>
+                  <div class="p-2">
+                    <div class="d-flex flex-wrap">
+                      <span *ngFor="let move of pokemonData.moves" 
+                            class="badge me-2 mb-2" [class]="'bg-' + type + '' + ' txt-' + type">
+                        {{ move }}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+</div>

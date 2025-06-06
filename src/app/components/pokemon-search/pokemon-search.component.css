@@ -1,0 +1,71 @@
+/* Colores fondo para tipos de Pokémon */
+.bg-normal { background-color: #A8A878 !important; }
+.bg-fire { background-color: #F08030 !important; }
+.bg-water { background-color: #6890F0 !important; }
+.bg-electric { background-color: #fdd73d !important; }
+.bg-grass { background-color: #78C850 !important; }
+.bg-ice { background-color: #98D8D8 !important; }
+.bg-fighting { background-color: #C03028 !important; }
+.bg-poison { background-color: #A040A0 !important; }
+.bg-ground { background-color: #E0C068 !important; }
+.bg-flying { background-color: #A890F0 !important; }
+.bg-psychic { background-color: #F85888 !important; }
+.bg-bug { background-color: #A8B820 !important; }
+.bg-rock { background-color: #B8A038 !important; }
+.bg-ghost { background-color: #705898 !important; }
+.bg-dragon { background-color: #7038F8 !important; }
+.bg-dark { background-color: #705848 !important; }
+.bg-steel { background-color: #B8B8D0 !important; }
+.bg-fairy { background-color: #EE99AC !important; }
+
+/* Colores de fondo en sutil para tipos de Pokémon */
+.bg-normal-subtle   { background-color: rgba(168, 167, 122, 0.15); color: #3E3E2F; }
+.bg-fire-subtle     { background-color: rgba(238, 129, 48, 0.15);  color: #582C0C; }
+.bg-water-subtle    { background-color: rgba(99, 144, 240, 0.15);  color: #1E3D8F; }
+.bg-electric-subtle { background-color: rgba(247, 208, 44, 0.15);  color: #6D5B00; }
+.bg-grass-subtle    { background-color: rgba(122, 199, 76, 0.15);  color: #3F5810; }
+.bg-ice-subtle      { background-color: rgba(150, 217, 214, 0.15); color: #2E5858; }
+.bg-fighting-subtle { background-color: rgba(194, 46, 40, 0.15);   color: #7F1C1B; }
+.bg-poison-subtle   { background-color: rgba(163, 62, 161, 0.15);  color: #562B5A; }
+.bg-ground-subtle   { background-color: rgba(226, 191, 101, 0.15); color: #705C1B; }
+.bg-flying-subtle   { background-color: rgba(169, 143, 243, 0.15); color: #4D408C; }
+.bg-psychic-subtle  { background-color: rgba(249, 85, 135, 0.15);  color: #7B2844; }
+.bg-bug-subtle      { background-color: rgba(166, 185, 26, 0.15);  color: #4B5913; }
+.bg-rock-subtle     { background-color: rgba(182, 161, 54, 0.15);  color: #6D5D10; }
+.bg-ghost-subtle    { background-color: rgba(115, 87, 151, 0.15);  color: #3F2953; }
+.bg-dragon-subtle   { background-color: rgba(111, 53, 252, 0.15);  color: #2E0CA3; }
+.bg-dark-subtle     { background-color: rgba(112, 87, 70, 0.15);   color: #3E2D22; }
+.bg-steel-subtle    { background-color: rgba(183, 183, 206, 0.15); color: #52525C; }
+.bg-fairy-subtle    { background-color: rgba(214, 133, 173, 0.15); color: #6E3B4F; }
+
+/* Colores de texto para tipos de Pokémon */
+.txt-normal   { color: #3E3E2F; }
+.txt-fire     { color: #582C0C; }
+.txt-water    { color: #1E3D8F; }
+.txt-electric { color: #6D5B00; }
+.txt-grass    { color: #3F5810; }
+.txt-ice      { color: #2E5858; }
+.txt-fighting { color: #7F1C1B; }
+.txt-poison   { color: #562B5A; }
+.txt-ground   { color: #705C1B; }
+.txt-flying   { color: #4D408C; }
+.txt-psychic  { color: #7B2844; }
+.txt-bug      { color: #4B5913; }
+.txt-rock     { color: #6D5D10; }
+.txt-ghost    { color: #3F2953; }
+.txt-dragon   { color: #2E0CA3; }
+.txt-dark     { color: #3E2D22; }
+.txt-steel    { color: #52525C; }
+.txt-fairy    { color: #6E3B4F; }
+
+/*tamaño de imagen de pokemon*/
+.pokemon-image {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Colores para barras de estadísticas */
+.stat-high { background-color: #54c86f; }
+.stat-medium { background-color: #dbb953; }
+.stat-low { background-color: #e04b5a; }
