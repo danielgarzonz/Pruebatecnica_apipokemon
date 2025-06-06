@@ -39,6 +39,9 @@ ng serve --host 0.0.0.0
 
 → Ahodrás acceder desde cualquier dispositivo movil en tu red usando: http://[tu-ip-local]:4200
 
+5. **Puedes ejecutar la App desplegada en GitHub Pages**
+https://prueba-apipokemon.vercel.app/
+
 # Tiempo total de desarrollo: 3 horas
 
     Configuración inicial: 1/2 hora
