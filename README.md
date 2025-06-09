@@ -18,7 +18,7 @@ npm install -g @angular/cli
 2. **Clonar el repositorio**:
 ```bash
     git clone https://github.com/danielgarzonz/Pruebatecnica_apipokemon.git
-    cd Pokemon-Api/frontend
+    cd pruebatecnica_apipokemon
 ```
 
 3. **Instalar dependencias**:
